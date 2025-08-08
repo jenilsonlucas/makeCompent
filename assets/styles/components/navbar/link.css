@@ -1,0 +1,12 @@
+.link{
+    color: var(--second-color);
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+.link:hover{
+    background: var(--color-hover);
+}
+

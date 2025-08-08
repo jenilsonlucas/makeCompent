@@ -1,0 +1,16 @@
+.button{
+    width: 150px;
+    padding: 16px 18px;
+    background: #2563EB;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 20px;
+    color: #eee;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover{
+    transform: scale(1.2);
+}

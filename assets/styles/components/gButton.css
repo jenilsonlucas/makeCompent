@@ -1,0 +1,100 @@
+.gButton{
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: #444;
+}
+
+.button--load{
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    padding: 8px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 20px;
+}
+
+.button--load-circle{
+    border: 6px solid #2563EB;
+    border-top: 6px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.button--dark-light{
+    position: relative;
+    width: 150px;
+    padding: 8px 12px;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    font-size: 20px;
+    transition: all .5s ease;
+}
+
+.button--dark-light.active{
+    justify-content: flex-end;
+    background: #2563EB;
+}
+
+.button--dark-light__radion{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2563EB;
+}
+
+.button--dark-light.active .button--dark-light__radion{
+    background: #fff;
+}
+
+.button--hover{
+    position: relative;
+    width: 150px;
+    padding: 16px 18px;
+    background: #2563EB;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 20px;
+    color: #eee;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.button--hover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all .3s;
+
+}
+
+.button--hover:hover::before{
+    width: 100%;
+}
+

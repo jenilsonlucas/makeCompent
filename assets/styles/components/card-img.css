@@ -1,0 +1,36 @@
+.card--img {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  margin: 20px;
+}
+
+.card--img:hover {
+  transform: scale(1.03);
+}
+
+.card__img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card__content {
+  padding: 16px;
+  gap: 5px;
+}
+
+.card__content .card__title {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #333;
+}
+
+.card__content .card__subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}

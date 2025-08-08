@@ -1,0 +1,5 @@
+.content--justify{
+    width: 100%;
+    background: var(--second-color);
+    text-align: justify;
+}

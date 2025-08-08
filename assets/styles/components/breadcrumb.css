@@ -1,0 +1,48 @@
+
+.breadcrumb li{
+    display: inline;
+}
+
+.breadcrumb a{
+    color: white;
+    background: burlywood;
+    text-decoration: none;
+    position: relative;
+    margin-right: 5px;
+    padding: 0px 11px;
+}
+
+.breadcrumb a::before,
+.breadcrumb a::after{
+    content: "";
+    position: absolute;
+    border-color: burlywood;
+    border-style:solid;
+    border-width: 10px 5px;
+    
+}
+
+.breadcrumb a::before{
+    left: -5px;
+    border-left-color: transparent;
+}
+
+.breadcrumb a::after{
+    left: 100%;
+    border-color: transparent;
+    border-left-color: burlywood;
+}
+
+.breadcrumb a:hover{
+    background: rgb(147, 115, 74);
+}
+
+.breadcrumb a:hover::before{
+    border-color: rgb(147, 115, 74);
+    border-left-color: transparent;
+
+}
+
+.breadcrumb a:hover::after{
+    border-left-color: rgb(147, 115, 74);
+}

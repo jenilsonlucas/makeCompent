@@ -1,0 +1,19 @@
+.input-dropdown {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  background: var(--second-color);
+  color: var(--primary-color);
+}
+
+
+.input-dropdown:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}

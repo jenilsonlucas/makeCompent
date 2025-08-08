@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make components</title>
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/components/card-img.js"></script>
+    <script src="./assets/js/components/card-btn.js"></script>
+    <script src="./assets/js/components/card.js"></script>
+    <script src="./assets/js/components/button.js"></script>
+    <script src="./assets/js/components/gButton.js"></script>
+    <script src="./assets/js/components/input-text.js"></script>
+    <script src="./assets/js/components/input-radio.js"></script>
+    <script src="./assets/js/components/input-check.js"></script>
+    <script src="./assets/js/components/dropdown/input-drop.js"></script>
+    <script src="./assets/js/components/data/input-data.js"></script>
+    <script src="./assets/js/components/data/datalist.js"></script>
+    <script src="./assets/js/components/slides.js"></script>
+    <script src="./assets/js/components/slide.js"></script>
+    <script src="./assets/js/components/section.js"></script>
+    <script src="./assets/js/components/navbar/navbar.js"></script>
+    <script src="./assets/js/components/content-j.js"></script>
+    <script src="./assets/js/components/table/table.js"></script>
+    <script src="./assets/js/components/breadcrumb.js"></script>
+    <script src="./assets/js/components/tabs.js"></script>
+    <link rel="stylesheet" href="assets/styles/all.css" />
+    <link rel="stylesheet" href="assets/styles/components/card-btn.css" />
+    <link rel="stylesheet" href="assets/styles/components/card-img.css" />
+    <link rel="stylesheet" href="assets/styles/components/card.css" />
+    <link rel="stylesheet" href="assets/styles/components/button.css" />
+    <link rel="stylesheet" href="assets/styles/components/gButton.css" />
+    <link rel="stylesheet" href="assets/styles/components/input-text.css" />
+    <link rel="stylesheet" href="assets/styles/components/input-radio.css" />
+    <link rel="stylesheet" href="assets/styles/components/input-check.css" />
+    <link rel="stylesheet" href="assets/styles/components/input-drop.css" />
+    <link rel="stylesheet" href="assets/styles/components/slides.css" />
+    <link rel="stylesheet" href="assets/styles/components/sextion.css" />
+    <link rel="stylesheet" href="assets/styles/components/navbar/navbar.css" />
+    <link rel="stylesheet" href="assets/styles/components/content-j.css" />
+    <link rel="stylesheet" href="assets/styles/components/breadcrumb.css" />
+    <link rel="stylesheet" href="assets/styles/components/tabs.css" />
+    <link rel="stylesheet" href="assets/styles/person.css" />
+  
+  <body>
+  
+    <div class="component-navbar"
+    data-links="GitHub"
+    data-hrefs="www.GitHub"
+    data-links-contents="GitHub"
+    data-links-classes="link"
+    >
+    <h3 class="logo">makeComponent</h3>
+    </div>
+
+   <div class="component-tab"
+   data-btn-Names="Introdução, 
+   Visão Geral
+   ",
+   data-contents="
+    <h1 class='tab__container--title'>Introdução</h1>
+    <p>Esta biblioteca foi desenvolvida para criar e renderizar componentes HTML de forma dinâmica a partir de atributos personalizados (data-*) e classes padronizadas (component-*).
+    O objetivo é simplificar a criação de elementos interativos e estruturados, como tabelas, slides, breadcrumbs, abas (tabs), formulários e outros, sem a necessidade de escrever manualmente todo o HTML de cada componente.</p>
+
+    <p>Através de um conjunto de funções reutilizáveis, a biblioteca /:</p>
+    <ul>
+      <li>Identifica elementos no DOM que possuem classes iniciadas por component-.</li>
+      <li>Constrói dinamicamente o HTML correspondente, aplicando as classes e propriedades definidas.</li>
+      <li>Suporta atributos personalizados para personalização de conteúdo, aparência e comportamento.</li>
+      <li>Substitui automaticamente os elementos originais pelo componente renderizado.</li>
+    </ul>
+
+    <p>Essa abordagem proporciona maior produtividade no desenvolvimento, padronização da interface e facilidade de manutenção do código, sendo ideal para projetos 
+    que demandam muitos elementos reutilizáveis com comportamentos semelhantes.</p>:
+   
+   
+   
+   
+    <h1 class='tab__container--title'>Visão Geral de Funcionamento </h1>
+    <p>A biblioteca segue um fluxo de execução simples, mas poderoso, para transformar elementos HTML
+       “declarativos” em componentes totalmente funcionais no navegador.</p>
+    <h3>Identificação dos componentes no DOM</h3>   
+    <p>No carregamento da página, a função initialize() varre o documento 
+      em busca de elementos que possuam uma classe que comece com component-.</p>
+    <p>Exemplo</p>
+    Exemplo:
+
+html
+Copy
+Edit
+<div class='ncomponent-tab' data-contents='Conteúdo 1:Conteúdo 2' data-btn-names='Aba 1,Aba 2'></div>
+Neste caso, o elemento será identificado como um componente de abas (component-tab).
+
+2️⃣ Definição do componente
+A função define(element) recebe o elemento encontrado e verifica qual modelo de componente corresponde a ele, usando findByName().
+
+Esse modelo contém informações como:
+
+Tipo de elemento HTML (div, img, table, etc.).
+
+Classes CSS padrão.
+
+Propriedades específicas (ex.: src para imagens, placeholder para inputs).
+
+Estrutura de filhos (children).
+
+3️⃣ Construção dinâmica
+A função buildComponents() cria o elemento final baseado nas propriedades do modelo e nos atributos data-* definidos no HTML original.
+
+Durante essa etapa, o componente:
+
+Aplica classes CSS.
+
+Define atributos (src, id, type, etc.).
+
+Gera elementos filhos automaticamente.
+
+Adiciona conteúdos dinâmicos (ex.: linhas de tabela, slides, links, abas).
+
+4️⃣ Substituição do elemento original
+Após ser totalmente montado, o novo componente substitui o elemento original no DOM.
+
+Isso garante que o HTML final exibido ao usuário seja otimizado e funcional, sem que o desenvolvedor precise escrever toda a estrutura manualmente.
+
+5️⃣ Renderização de tipos especiais
+A biblioteca possui lógica personalizada para alguns componentes:
+
+component-table → Gera <thead> e <tbody> automaticamente a partir de data-th e data-td.
+
+component-slide → Monta slides de imagens com a primeira imagem ativa.
+
+component-breadcrumb → Cria navegação hierárquica (links em lista ordenada).
+
+component-tab → Cria um sistema de abas com botões e conteúdos correspondentes.
+
+💡 Resumo visual do fluxo
+
+Encontrar → Procurar no DOM classes que começam com component-.
+
+Associar → Localizar o modelo de configuração do componente.
+
+Construir → Criar elemento com base nos atributos e propriedades.
+
+Substituir → Trocar o HTML original pelo componente montado.
+
+Renderizar → Aplicar comportamentos e estilos interativos.
+
+
+   "
+   ></div>
+
+   
+    <script>
+      initialize();
+    </script>
+    <script src="./assets/js/events.js"></script>
+  </body>
+</html>

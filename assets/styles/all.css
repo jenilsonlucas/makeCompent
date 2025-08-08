@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+
+}
+
+:root{
+    --primary-color: #3B82F6;
+    --second-color: #fff;
+    --color-hove: #2563EB;
+
+}
+
+.flex{
+    display: flex;
+}
+
+.flex--column{
+    flex-direction: column;
+}
+
+.relative{
+    position: relative;
+}
