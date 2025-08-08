@@ -1,6 +1,328 @@
 let tabIndex = 0;
 const components = [];
 
+
+//Card
+components.push({
+    name: 'component-card',
+    type: 'div',
+    property: { 
+        classes: 'card, flex, flex--column',
+    },
+    children: [
+        {
+            name: "content",
+            type: "h3",
+            property: {
+                classes: "card__questions",
+                content: "Porque que Angola E assim?"
+            }
+        }
+    ]             
+})
+
+//card com botao
+components.push(
+    {
+        name: 'component-card--btn',
+        type: 'div',
+        property: { 
+            classes: 'card--btn, flex, flex--column',
+        },
+        children: [
+            {
+                name: 'img',
+                type: 'img',           
+                property: {
+                     classes: 'card__img',
+                     src: './assets/images/test.jpg'    
+                }
+            },
+            {
+                name: 'content',
+                type: 'div',
+                property: {
+                     classes: 'card__content, flex, flex--column, relative',    
+                },
+                children: [
+                    {
+                        name: 'title',
+                        type: 'h1',
+                        property: {
+                            classes: 'card__title',    
+                            content: 'Tecnologia'
+                        }
+                    },
+                    {
+                        name: 'subtitle',
+                        type: 'p',
+                        property: {
+                            classes: 'card__subtitle',    
+                            content: 'Poucas coisas foram feitas para isso...'
+                        }
+                    },
+                    {
+                        name: 'button',
+                        type: 'div',
+                        property: {
+                            classes: 'card__btn, flex',    
+                            content: 'Saber mais'
+                        }
+                    }
+                ]
+            }
+        ]
+   },
+)
+//Card com img
+
+components.push(
+    {
+        name: 'component-card--img',
+        type: 'div',
+        property: { 
+            classes: 'card--img, flex, flex--column',
+        },
+        children: [
+            {
+                name: 'img',
+                type: 'img',
+                property: {
+                     classes: 'img--card',
+                     src: './assets/images/test.jpg'    
+                }
+            },
+            {
+                name: '.content',
+                type: 'div',
+                property: {
+                     classes: 'card__content, flex, flex--column',    
+                },
+                children: [
+                    {
+                        name: 'title',
+                        type: 'h1',
+                        property: {
+                        classes: 'card__title',    
+                        content: 'Tecnologia'
+                        }
+                    },
+                    {
+                        name: 'subtitle',
+                        type: 'p',
+                        property: {
+                          classes: 'card__subtitle',    
+                          content: 'poucas coisas foram feitas para isso'
+                        }
+                    }
+                ]
+            }
+        ]
+   },
+)
+
+//Botão
+components.push({
+    name: 'component-button',
+    type: 'button',
+    property: { 
+        classes: 'button, flex',
+        content: 'click aqui'
+    }
+})
+
+//Grupo de Botao
+components.push({
+  name: "component-gButton",
+  type: "div",
+  property: {
+    classes: "gButton, flex",
+  },
+  children: [
+    {
+      name: "button",
+      type: "button",
+      property: {
+        classes: "button, flex",
+        content: "click aqui",
+      },
+    },
+    {
+      name: "button--load",
+      type: "button",
+      property: {
+        classes: "button--load, flex",
+      },
+      children: [
+        {
+          name: "button--load-circle",
+          type: "div",
+          property: {
+            classes: "button--load-circle",
+          },
+        },
+      ],
+    },
+    {
+      name: "button--dark-light",
+      type: "div",
+      property: {
+        classes: "button--dark-light, flex",
+      },
+      children: [
+        {
+          name: "button--dark-light__radion",
+          type: "div",
+          property: {
+            classes: "button--dark-light__radion",
+          },
+        },
+      ],
+    },
+    {
+      name: "button--hover",
+      type: "button",
+      property: {
+        classes: "button--hover, flex",
+        content: "click aqui",
+      },
+    },
+  ],
+});
+
+
+//inppu text
+components.push({
+    name: 'component-input-box--text',
+    type: 'div',
+    property: { 
+        classes: 'input-box, flex',
+    },
+    children: [
+        {
+            name: 'input__text',
+            type: 'input',
+            property: {
+                classes: 'input__text',
+                type: 'text',
+                placeholder: ' '
+            }
+        },
+        {
+            name: 'input__label',
+            type: 'label',
+            property: {
+                classes: 'input__label',
+                content: 'Digite o seu nome'
+            }
+        }
+    ]
+})
+
+//input radio
+components.push({
+    name: 'component-input--radio',
+    type: 'input',
+    property: { 
+        classes: 'input--radio',
+        type: 'radio'
+    },
+})
+
+//input checkboxx 
+components.push({
+  name: "component-input--check",
+  type: "input",
+  property: {
+    classes: "input-box, flex",
+    type: "checkbox",
+  },
+});
+
+
+// input data
+
+components.push({
+    name: 'component-input-data',
+    type: 'input',
+    property: { 
+        classes: 'input-data',
+        placeholder: 'digite alguma coisa',
+        list: 'minha',
+        type: "text"
+    },
+})
+
+components.push({
+  name: "component-datalist",
+  type: "datalist",
+  property: {
+    classes: "input-data",
+    placeholder: "digite alguma coisa",
+    id: "minha",
+  },
+});
+
+//Carrossel
+components.push({
+  name: "component-slide",
+  type: "div",
+  property: {
+    classes: "slider",
+  },
+});
+
+//tabela
+components.push({
+  name: 'component-table',
+  type: 'table',
+  property: {
+    classes: 'table-comp',
+}
+});
+
+
+//breadcrumb
+components.push({
+    name: 'component-breadcrumb',
+    type: 'ul',
+    property: { 
+        classes: 'breadcrumb',
+    },             
+})
+
+//section cards
+components.push({
+    name: 'component-sec-flex',
+    type: 'div',
+    property: { 
+        classes: 'sec-flex, flex',
+    }             
+})
+
+//barra de navegação com links costumizaveis
+components.push({
+    name: 'component-navbar',
+    type: 'div',
+    navbar: true,
+    property: { 
+        classes: 'navbar, flex' 
+    }             
+})
+
+//tab
+
+components.push({
+  name: "component-tab",
+  type: "div",
+  property: {
+    classes: "tab-container",
+  },
+});
+
+
+
+
 function define(element) {
   const componentClassName = Array.from(element.classList).find((cls) =>
     cls.startsWith("component-")

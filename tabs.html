@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make Components – Tabs</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/styles/all.css" />
+  <link rel="stylesheet" href="assets/styles/components/tabs.css" />
+  <link rel="stylesheet" href="assets/styles/components/navbar/navbar.css" />
+  <link rel="stylesheet" href="assets/styles/person.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="component-navbar"
+    data-links="GitHub"
+    data-hrefs="https://github.com/jenilsonlucas/makeCompent"
+    data-links-contents="GitHub"
+    data-links-classes="link">
+    <h3 class="logo">makeComponent</h3>
+  </div>
+
+  <!-- Navbar lateral -->
+  <aside>
+    <nav class="navbar-side">
+      <a href="./index.html">Introdução</a>
+      <a href="./geral.html">Visão Geral</a>
+      <div class="dropdown">
+        <div class="select">
+          <span class="selected">Components</span>
+          <div class="caret"></div>
+        </div>
+        <ul class="menu">
+          <li><a href="./cards.html">Cards</a></li>
+          <li><a href="./button.html">Botão</a></li>
+          <li><a href="./input.html">Inputs</a></li>
+          <li><a href="./carrossel.html">Carrossel</a></li>
+          <li><a href="./tabela.html">Tabela</a></li>
+          <li><a href="./breadcrumb.html">Breadcrumb</a></li>
+          <li><a href="./section.html">Section com card</a></li>
+          <li><a href="./navbar.html">Navegação</a></li>
+          <li><a href="./tabs.html">Tabs</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo -->
+  <div class="container-main">
+    <div class="content-main">
+      <h1 class="tab__container--title">TABS</h1>
+
+      <p>
+        O componente <strong>tabs</strong> permite alternar entre diferentes conteúdos organizados em abas.
+        Ele é gerado dinamicamente a partir dos atributos <code>data-btn-names</code> e <code>data-contents</code>.
+      </p>
+
+      <h3 class="tab__container--subtitle">1. Exemplo de Uso</h3>
+
+      <pre><code>
+        &lt;div class="component-tab"
+        data-btn-names="Aba 1,Aba 2,Aba 3"
+        data-contents="Conteúdo da primeira aba: bem-vindo!,
+        Conteúdo da segunda aba: detalhes aqui,
+        Conteúdo da terceira aba: obrigado por visitar."&gt;
+        &lt;/div&gt;
+      </code></pre>
+
+      <h3 class="tab__container--subtitle">2. Explicação dos Atributos</h3>
+      <ul>
+        <li><code>data-btn-names</code>: Nomes dos botões/abas (separados por vírgula)</li>
+        <li><code>data-contents</code>: Conteúdos de cada aba (separados por vírgula ou dois-pontos se for HTML)</li>
+      </ul>
+
+      <h3 class="tab__container--subtitle">3. Exemplo Real</h3>
+
+      <div class="component-tab"
+        data-btn-names="Resumo,Galeria,Contato"
+        data-contents="
+        Aqui é o conteúdo do resumo:,
+        Aqui pode conter imagens ou cards:,
+        Envie uma mensagem para nosso time">
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./assets/js/scripts.js"></script>
+  <script>initialize();</script>
+  <script src="./assets/js/events.js"></script>
+</body>
+</html>

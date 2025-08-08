@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make components – Tabela</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/styles/all.css" />
+  <link rel="stylesheet" href="assets/styles/components/navbar/navbar.css" />
+  <link rel="stylesheet" href="assets/styles/components/tabs.css" />
+  <link rel="stylesheet" href="assets/styles/components/table.css" />
+  <link rel="stylesheet" href="assets/styles/person.css" />
+</head>
+<body>
+
+  <!-- Navbar principal -->
+  <div class="component-navbar"
+    data-links="GitHub"
+    data-hrefs="https://github.com/jenilsonlucas/makeCompent"
+    data-links-contents="GitHub"
+    data-links-classes="link">
+    <h3 class="logo">makeComponent</h3>
+  </div>
+
+  <!-- Navbar lateral -->
+  <aside>
+    <nav class="navbar-side">
+      <a href="./index.html">Introdução</a>
+      <a href="./geral.html">Visão Geral</a>
+      <div class="dropdown">
+        <div class="select">
+          <span class="selected">Components</span>
+          <div class="caret"></div>
+        </div>
+        <ul class="menu">
+          <li><a href="./cards.html">Cards</a></li>
+          <li><a href="./button.html">Botão</a></li>
+          <li><a href="./input.html">Inputs</a></li>
+          <li><a href="./carrossel.html">Carrossel</a></li>
+          <li><a href="./tabela.html">Tabela</a></li>
+          <li><a href="./breadcrumb.html">Breadcrumb</a></li>
+          <li><a href="./section.html">Section com card</a></li>
+          <li><a href="./navbar.html">Navegação</a></li>
+          <li><a href="./tabs.html">Tabs</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo principal -->
+  <div class="container-main">
+    <div class="content-main">
+      <h1 class="tab__container--title">TABELA</h1>
+
+      <p>
+        O componente <strong>tabela</strong> é uma representação de dados em linhas e colunas.
+        Na biblioteca, você só precisa de uma <code>div</code> com a classe <code>component-table</code> e os dados são passados via <code>data</code>.
+      </p>
+
+      <p>Você define no HTML algo como:</p>
+      <pre><code>
+<span class="tag">&lt;div</span> 
+  <span class="class">class=<span class="code-content">"component-table"</span></span>
+  <span class="attr">data-th=<span class="code-content">"Nome,Idade,Curso"</span></span>
+  <span class="attr">data-td=<span class="code-content">"Lucas,23,TI;Maria,22,Design"</span></span>
+<span class="tag">&gt;&lt;/div&gt;</span>
+      </code></pre>
+
+    
+
+      <h3 class="tab__container--subtitle">2. Resultado</h3>
+        <div class="component-table"
+          data-th="Nome,Idade,Curso"
+          data-td="Lucas:23:TI,Maria:22:Design">
+        </div>
+
+      <h3 class="tab__container--subtitle">3. Atributos Dinâmicos</h3>
+      <ul>
+        <li><code>data-th</code>: Cabeçalho da tabela separado por vírgulas.</li>
+        <li><code>data-td</code>: Dados da tabela, linhas separadas por ponto e vírgula (,) e dados separados por :.</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./assets/js/scripts.js"></script>
+  <script>initialize();</script>
+  <script src="./assets/js/events.js"></script>
+</body>
+</html>

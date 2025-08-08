@@ -16,7 +16,7 @@
 .breadcrumb a::after{
     content: "";
     position: absolute;
-    border-color: burlywood;
+    border-color: burlywoodp;
     border-style:solid;
     border-width: 10px 5px;
     

@@ -60,33 +60,63 @@
   
     <div class="container-main">
       <div class="content-main">
-        <h1 class='tab__container--title'>Introdução</h1>
-        <p>Esta biblioteca foi desenvolvida para criar e renderizar componentes HTML de forma dinâmica a partir de atributos personalizados (data-*) e classes padronizadas (component-*).
-        O objetivo é simplificar a criação de elementos interativos e estruturados, como tabelas, slides, breadcrumbs, abas (tabs), formulários e outros, sem a necessidade de escrever manualmente todo o HTML de cada componente.</p>
+        <h1 class='tab__container--title'>CARDS</h1>
 
-        <p>Através de um conjunto de funções reutilizáveis, a biblioteca /:</p>
-        <ul>
-          <li>Identifica elementos no DOM que possuem classes iniciadas por component-.</li>
-          <li>Constrói dinamicamente o HTML correspondente, aplicando as classes e propriedades definidas.</li>
-          <li>Suporta atributos personalizados para personalização de conteúdo, aparência e comportamento.</li>
-          <li>Substitui automaticamente os elementos originais pelo componente renderizado.</li>
-        </ul>
+        <p>Na biblioteca, um card é um bloco de conteúdo (geralmente div)
+          com uma estrutura pré-definida (título, imagem, botão, etc.) que é construído 
+          dinamicamente com base numa class que começa com component-card.</p>
 
-        <p>Essa abordagem proporciona maior produtividade no desenvolvimento, padronização da interface e facilidade de manutenção do código, sendo ideal para projetos 
-        que demandam muitos elementos reutilizáveis com comportamentos semelhantes.</p>
-        
-        
-        <h3 class='tab__container--subtitle'>Instalação</h3>
+        <p>Você define no HTML algo como:</p>
 
-        <p>Você pode instalar a biblioteca diretamente a partir do repositório no GitHub.</p>
-
-        <p>Abra o terminal no seu computador e digite o comando/:</p>
         <pre>
-          <code class='code-terminal'>
-            git clone https/://github.com/jenilsonlucas/makeCompent.git
+          <code>
+            <span class='tag'>div</span> 
+            <span class='class'>class=<span class='code-content'>'component-card'</span></span>
+            <span class='tag'>div</span>
           </code>
         </pre>
+
+        <p>E no JS, a biblioteca transforma isso em um elemento HTML completo com conteúdo e estilo.</p>
+
+       <h3 class='tab__container--subtitle'> 2. Tipos de Cards Disponíveis</h3>
+       <div class="component-tab"
+       data-btn-Names="Card com titutlo, 
+       Card com imagem, Card Com butão
+       "
+
+       data-contents="
+        div class='component-card'
+       :
+       div class='component-card--img'
+       :
+       div class='component-card--btn'"
+       >
+       </div>
+
+       <h3 class='tab__container--subtitle'> 3. Resultados</h3>
+        <div class="component-card"
+       data-content="O poder é relativo aos olhes de quem vê"></div>
+       <div class="component-sec-flex">
+       <div class="component-card--img"
+       data-title="Porque que avida é dura?"
+       data-subtitle="Para sabermos o valor da vida tem vezes que é necessário para por algumas coisas"
+       data-src="./assets/images/slide1.jpg"
+       ></div>
+       <div class="component-card--btn"
+       data-title="Porque o curso de informatica?"
+       data-subtitle="Os curso são apenas uma janela naquilo que diz com a sua personalidade..."
+       data-button="clique aqui"
+       ></div>
+       </div>
+       
+
+       <h3 class='tab__container--subtitle'> Mudança dos dados dinamicamente</h3>
+
+       <p>podemos mudar os dados dinamicamente apartir dos atributos data</p>
       </div>
+
+
+       
     </div>
     <script src="./assets/js/scripts.js"></script>
     <script>

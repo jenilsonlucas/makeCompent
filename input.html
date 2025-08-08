@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make components – Inputs</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/styles/all.css" />
+  <link rel="stylesheet" href="assets/styles/components/input-text.css" />
+  <link rel="stylesheet" href="assets/styles/components/input-radio.css" />
+  <link rel="stylesheet" href="assets/styles/components/input-check.css" />
+  <link rel="stylesheet" href="assets/styles/components/input-drop.css" />
+  <link rel="stylesheet" href="assets/styles/components/navbar/navbar.css" />
+  <link rel="stylesheet" href="assets/styles/components/tabs.css" />
+  <link rel="stylesheet" href="assets/styles/person.css" />
+</head>
+<body>
+  <!-- Navbar principal -->
+  <div class="component-navbar"
+       data-links="GitHub"
+       data-hrefs="https://github.com/jenilsonlucas/makeCompent"
+       data-links-contents="GitHub"
+       data-links-classes="link">
+    <h3 class="logo">makeComponent</h3>
+  </div>
+
+  <!-- Navbar lateral -->
+  <aside>
+    <nav class="navbar-side">
+      <a href="./index.html">Introdução</a>
+      <a href="./geral.html">Visão Geral</a>
+      <div class="dropdown">
+        <div class="select">
+          <span class="selected">Components</span>
+          <div class="caret"></div>
+        </div>
+        <ul class="menu">
+          <li><a href="./cards.html">Cards</a></li>
+          <li><a href="./button.html">Botão</a></li>
+          <li><a href="./input.html">Inputs</a></li>
+          <li><a href="./carrossel.html">Carrossel</a></li>
+          <li><a href="./tabela.html">Tabela</a></li>
+          <li><a href="./breadcrumb.html">Breadcrumb</a></li>
+          <li><a href="./section.html">Section com card</a></li>
+          <li><a href="./navbar.html">Navegação</a></li>
+          <li><a href="./tabs.html">Tabs</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo principal -->
+  <div class="container-main">
+    <div class="content-main">
+      <h1 class='tab__container--title'>INPUTS</h1>
+
+      <p>No sistema, inputs são componentes interativos renderizados dinamicamente com base em classes como <code>component-input-box--text</code>, <code>component-input--radio</code>, etc.</p>
+      <p>Você define no HTML assim:</p>
+      <pre><code><span class='tag'>&lt;div</span> <span class='class'>class=<span class='code-content'>'component-input-box--text'</span></span><span class='tag'>&gt;&lt;/div&gt;</span></code></pre>
+      <p>E o JS transforma isso em um input estilizado completo.</p>
+
+      <h3 class='tab__container--subtitle'>1. Tipos de Inputs Disponíveis</h3>
+      <div class="component-tab"
+           data-btn-names="Input Text,Radio,Checkbox,Datalist"
+           data-contents="
+             div class='component-input-box--text' data-placeholder='Seu nome'
+           :
+             input class='component-input--radio'
+           :
+             input class='component-input--check'
+           :
+             datalist class='component-datalist' data-array='Opção1,Opção2,Opção3'">
+      </div>
+
+      <h3 class='tab__container--subtitle'>2. Resultados</h3>
+      
+        <div class="component-input-box--text"
+             data-placeholder="Digite seu 5nome"
+             data-name="nome"
+             data-classes="input-grande">
+        <input class="component-input--radio" type="radio" data-classes="radio-custom" />
+        <input class="component-input--check" type="checkbox" data-classes="check-custom" />
+        <div class="component-input-data" data-list="meu"></div>
+        <datalist class="component-datalist" data-array="Maçã,Banana,Laranja" data-list="meu" id="meu"></datalist>
+      </div>
+
+      <h3 class='tab__container--subtitle'>3. Mudança dos dados dinamicamente</h3>
+      <p>Use <code>data-*</code> para alterar comportamentos e aparências:</p>
+      <pre><code>
+<span class='tag'> &lt;div</span>
+  <span class='class'>class=<span class='code-content'>'component-input-box--text'</span></span>
+  <span class='attr'>data-placeholder=<span class='code-content'>"Seu email"</span></span>
+  <span class='attr'>data-name=<span class='code-content'>"email"</span></span>
+  <span class='attr'>data-classes=<span class='code-content'>"input-email"</span></span>
+<span class='tag'>&gt;&lt;/div&gt;</span>
+</code></pre>
+     
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./assets/js/scripts.js"></script>
+  <script>initialize();</script>
+  <script src="./assets/js/events.js"></script>
+</body>
+</html>

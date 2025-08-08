@@ -1,0 +1,244 @@
+<div class="component-tab"
+   data-btn-Names="Introdução, 
+   Visão Geral, Cards
+   ",
+   data-contents="
+    <h1 class='tab__container--title'>Introdução</h1>
+    <p>Esta biblioteca foi desenvolvida para criar e renderizar componentes HTML de forma dinâmica a partir de atributos personalizados (data-*) e classes padronizadas (component-*).
+    O objetivo é simplificar a criação de elementos interativos e estruturados, como tabelas, slides, breadcrumbs, abas (tabs), formulários e outros, sem a necessidade de escrever manualmente todo o HTML de cada componente.</p>
+
+    <p>Através de um conjunto de funções reutilizáveis, a biblioteca /:</p>
+    <ul>
+      <li>Identifica elementos no DOM que possuem classes iniciadas por component-.</li>
+      <li>Constrói dinamicamente o HTML correspondente, aplicando as classes e propriedades definidas.</li>
+      <li>Suporta atributos personalizados para personalização de conteúdo, aparência e comportamento.</li>
+      <li>Substitui automaticamente os elementos originais pelo componente renderizado.</li>
+    </ul>
+
+    <p>Essa abordagem proporciona maior produtividade no desenvolvimento, padronização da interface e facilidade de manutenção do código, sendo ideal para projetos 
+    que demandam muitos elementos reutilizáveis com comportamentos semelhantes.</p>
+    
+    
+    <h3 class='tab__container--subtitle'>Instalação</h3>
+
+    <p>Você pode instalar a biblioteca diretamente a partir do repositório no GitHub.</p>
+
+    <p>Abra o terminal no seu computador e digite o comando/:</p>
+    <pre>
+      <code class='code-terminal'>
+        git clone https/://github.com/jenilsonlucas/makeCompent.git
+      </code>
+    </pre>
+
+    :
+   
+    <h1 class='tab__container--title'>Visão Geral de Funcionamento </h1>
+    <p>A biblioteca segue um fluxo de execução simples, mas poderoso, para transformar elementos HTML
+       “declarativos” em componentes totalmente funcionais no navegador.</p>
+    <h3 class='tab__container--subtitle'>Identificação dos componentes no DOM</h3>   
+    <p>No carregamento da página, a função initialize() varre o documento 
+      em busca de elementos que possuam uma classe que comece com component-.</p>
+    <p>Exemplo</p>
+    <pre>
+      <code>
+        <span class='tag'>div</span> 
+        <span class='class'>class=<span class='code-content''>'component-tab'</span></span> 
+        <span class='data'>data-contents=<span class='code-content'>'Conteúdo 1/:Conteúdo 2'</span></span> 
+        <span class='data'>data-btn-names=<span class='code-content'>'Aba 1,Aba 2'</span></span>
+        <span class='tag'>div</span>
+      </code>
+    </pre>
+    
+    <p>Neste caso, o elemento será identificado como um componente de abas (component-tab)</p>.
+
+    <h3 class='tab__container--subtitle'>Definição do componente</h3>
+    <p>A função define(element) recebe o elemento encontrado e verifica qual modelo
+       de componente corresponde a ele, usando findByName().</p>
+
+    <p>Esse modelo contém informações como/:<p>
+
+    <ul>
+      <li>Tipo de elemento HTML (div, img, table, etc.).</li>
+      <li>Classes CSS padrão.</li>
+      <li>Propriedades específicas (ex./: src para imagens, placeholder para inputs).</li>
+      <li>Estrutura de filhos (children).</li>
+    </ul>
+
+    <h3 class='tab__container--subtitle'>Construção dinâmica</h3>
+    
+    <p>A função buildComponents() cria o elemento final baseado nas propriedades do
+       modelo e nos atributos data-* definidos no HTML original.</p>
+
+    <p>Durante essa etapa, o componente/:</p>
+
+    <ul>
+      <li>Aplica classes CSS.</li>
+      <li>Define atributos (src, id, type, etc.).</li>
+      <li>Gera elementos filhos automaticamente.</li>
+      <li>Adiciona conteúdos dinâmicos (ex./: linhas de tabela, slides, links, abas).</li>
+    </ul>
+
+    <h3 class='tab__container--subtitle'>Substituição do elemento original</h3>
+    
+    <p>Após ser totalmente montado, o novo componente substitui o elemento original no DOM.</p>
+
+    <p>Isso garante que o HTML final exibido ao usuário seja otimizado e funcional, sem que o
+       desenvolvedor precise escrever toda a estrutura manualmente.</p>
+
+    <h3 class='tab__container--subtitle'>Renderização de tipos especiais</h3>
+ 
+    <p>A biblioteca possui lógica personalizada para alguns componentes/:</p>
+
+    <ul>
+      <li>component-table → Gera <thead> e <tbody> automaticamente a partir de data-th e data-td.</li>
+      <li>component-slide → Monta slides de imagens com a primeira imagem ativa.</li>
+      <li>component-breadcrumb → Cria navegação hierárquica (links em lista ordenada).</li>
+      <li>component-tab → Cria um sistema de abas com botões e conteúdos correspondentes.</li>
+    </ul>
+
+    <h3 class='tab__container--subtitle'>Resumo visual do fluxo</h3>
+
+    <ul>
+      <li>Encontrar → Procurar no DOM classes que começam com component-.</li>
+      <li>Associar → Localizar o modelo de configuração do componente.</li>
+      <li>Construir → Criar elemento com base nos atributos e propriedades.</li>
+      <li>Substituir → Trocar o HTML original pelo componente montado.</li>
+      <li>Renderizar → Aplicar comportamentos e estilos interativos.</li>
+    </ul>
+
+    :
+
+     <h1 class='tab__container--title'>Renderização</h1>
+     <p>Está seccção mostra</p>
+
+    
+    
+   "
+   >
+
+
+   <h1 class='tab__container--title'>CARDS</h1>
+
+        <p>Na biblioteca, um card é um bloco de conteúdo (geralmente div)
+          com uma estrutura pré-definida (título, imagem, botão, etc.) que é construído 
+          dinamicamente com base numa class que começa com component-card.</p>
+
+        <p>Você define no HTML algo como:</p>
+
+        <pre>
+          <code>
+            <span class='tag'>div</span> 
+            <span class='class'>class=<span class='code-content'>'component-card'</span></span>
+            <span class='tag'>div</span>
+          </code>
+        </pre>
+
+        <p>E no JS, a biblioteca transforma isso em um elemento HTML completo com conteúdo e estilo.</p>
+
+       <h3 class='tab__container--subtitle'> 2. Tipos de Cards Disponíveis</h3>
+       <p>Um card simples com título.</p>
+      
+
+      <p>Um card simples com butçao.</p>
+
+      <pre>
+        <code>
+          <span class="tag">components.push({</span>
+              <span class="code-content">name: 'component-card--btn',
+              type: 'div',
+              property: { classes: 'card--btn, flex, flex--column' },
+              children: [
+                {
+                  name: '.img',
+                  type: 'img',
+                  property: {
+                    classes: 'card__img',
+                    src: './assets/images/test.jpg'
+                  }
+                },
+                {
+                  name: 'content',
+                  type: 'div',
+                  property: {
+                    classes: 'card__content, flex, flex--column, relative'
+                  },
+                  children: [
+                    {
+                      name: 'title',
+                      type: 'h1',
+                      property: {
+                        classes: 'card__title',
+                        content: 'Tecnologia'
+                      }
+                    },
+                    {
+                      name: 'subtitle',
+                      type: 'p',
+                      property: {
+                        classes: 'card__subtitle',
+                        content: 'Poucas coisas foram feitas para isso...'
+                      }
+                    },
+                    {
+                      name: 'button',
+                      type: 'div',
+                      property: {
+                        classes: 'card__btn, flex',
+                        content: 'Saber mais'
+                      }
+                    }
+                  ]
+                }
+              ]</span>
+            <span class="tag">})</span>
+
+        </code>
+      </pre>
+
+      <p>card com imagem</p>
+
+      <pre>
+        <code>
+           <span class="tag">components.push({</span>
+              <span class="code-content">name: 'component-card--img',
+              type: 'div',
+              property: { classes: 'card--img, flex, flex--column' },
+              children: [
+                {
+                  name: 'img',
+                  type: 'img',
+                  property: {
+                    classes: 'img--card',
+                    src: './assets/images/test.jpg'
+                  }
+                },
+                {
+                  name: '.content',
+                  type: 'div',
+                  property: {
+                    classes: 'card__content, flex, flex--column'
+                  },
+                  children: [
+                    {
+                      name: 'title',
+                      type: 'h1',
+                      property: {
+                        classes: 'card__title',
+                        content: 'Tecnologia'
+                      }
+                    },
+                    {
+                      name: 'subtitle',
+                      type: 'p',
+                      property: {
+                        classes: 'card__subtitle',
+                        content: 'Poucas coisas foram feitas para isso...'
+                      }
+                    }
+                  ]
+                }
+              ]</span>
+            <span class="tag">})</span>
+
+        </code>
+      </pre>

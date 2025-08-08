@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make components – Section Flex</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/styles/all.css" />
+  <link rel="stylesheet" href="assets/styles/components/sextion.css" />
+  <link rel="stylesheet" href="assets/styles/components/card.css" />
+  <link rel="stylesheet" href="assets/styles/components/card-img.css" />
+  <link rel="stylesheet" href="assets/styles/components/card-btn.css" />
+  <link rel="stylesheet" href="assets/styles/components/navbar/navbar.css" />
+  <link rel="stylesheet" href="assets/styles/components/tabs.css" />
+  <link rel="stylesheet" href="assets/styles/person.css" />
+</head>
+<body>
+
+  <!-- Navbar principal -->
+  <div class="component-navbar"
+    data-links="GitHub"
+    data-hrefs="https://github.com/jenilsonlucas/makeCompent"
+    data-links-contents="GitHub"
+    data-links-classes="link">
+    <h3 class="logo">makeComponent</h3>
+  </div>
+
+  <!-- Navbar lateral -->
+  <aside>
+    <nav class="navbar-side">
+      <a href="./index.html">Introdução</a>
+      <a href="./geral.html">Visão Geral</a>
+      <div class="dropdown">
+        <div class="select">
+          <span class="selected">Components</span>
+          <div class="caret"></div>
+        </div>
+        <ul class="menu">
+          <li><a href="./cards.html">Cards</a></li>
+          <li><a href="./button.html">Botão</a></li>
+          <li><a href="./input.html">Inputs</a></li>
+          <li><a href="./carrossel.html">Carrossel</a></li>
+          <li><a href="./tabela.html">Tabela</a></li>
+          <li><a href="./breadcrumb.html">Breadcrumb</a></li>
+          <li><a href="./section.html">Section com card</a></li>
+          <li><a href="./navbar.html">Navegação</a></li>
+          <li><a href="./tabs.html">Tabs</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo principal -->
+  <div class="container-main">
+    <div class="content-main">
+      <h1 class="tab__container--title">SECTION FLEX</h1>
+
+      <p>
+        O componente <strong>`component-sec-flex`</strong> é uma estrutura que serve como seção de layout flexível,
+        geralmente usada para exibir cards ou blocos lado a lado com responsividade automática.
+      </p>
+
+      <p>Você define no HTML assim:</p>
+
+      <pre><code>
+<span class="tag">&lt;div</span> 
+  <span class="class">class=<span class="code-content">"component-sec-flex"</span></span>
+<span class="tag">&gt;</span>
+
+  <span class="tag">&lt;div</span> class="component-card--img"
+    data-title="Título do card"
+    data-subtitle="Subtítulo explicativo"
+    data-src="imagem.jpg"<span class="tag">&gt;&lt;/div&gt;</span>
+
+  <span class="tag">&lt;div</span> class="component-card--btn"
+    data-title="Outro card"
+    data-subtitle="Mais um conteúdo"
+    data-button="Clique aqui"<span class="tag">&gt;&lt;/div&gt;</span>
+
+<span class="tag">&lt;/div&gt;</span>
+      </code></pre>
+
+      <h3 class="tab__container--subtitle">1. Exemplos</h3>
+
+      <div class="component-sec-flex">
+        <div class="component-card--img"
+          data-title="Por que estudar design?"
+          data-subtitle="Design é sobre como as coisas funcionam, não só como parecem."
+          data-src="assets/images/slide1.jpg"></div>
+
+        <div class="component-card--btn"
+          data-title="Por que programar?"
+          data-subtitle="Programar é dar vida a ideias e criar soluções."
+          data-button="Explorar"></div>
+      </div>
+
+      <h3 class="tab__container--subtitle">2. Benefícios</h3>
+      <ul>
+        <li>Layout responsivo usando flex.</li>
+        <li>Facilidade para montar seções com múltiplos componentes.</li>
+        <li>Integração direta com os outros componentes da biblioteca.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./assets/js/scripts.js"></script>
+  <script>initialize();</script>
+  <script src="./assets/js/events.js"></script>
+</body>
+</html>

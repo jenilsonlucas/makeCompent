@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     height: 100px;
-    background: #444;
+    background: transparent;
+    margin-left: 5px;
 }
 
 .button--load{
@@ -20,7 +21,7 @@
 }
 
 .button--load-circle{
-    border: 6px solid #2563EB;
+    border: 6px solid #d9465f;
     border-top: 6px solid #fff;
     border-radius: 50%;
     width: 40px;
@@ -52,14 +53,14 @@
 
 .button--dark-light.active{
     justify-content: flex-end;
-    background: #2563EB;
+    background: #d9465f;
 }
 
 .button--dark-light__radion{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #2563EB;
+    background: #d9465f;
 }
 
 .button--dark-light.active .button--dark-light__radion{
@@ -70,7 +71,7 @@
     position: relative;
     width: 150px;
     padding: 16px 18px;
-    background: #2563EB;
+    background: #d9465f;
     border: none;
     border-radius: 30px;
     outline: none;

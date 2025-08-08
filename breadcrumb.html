@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make components – Breadcrumb</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/styles/all.css" />
+  <link rel="stylesheet" href="assets/styles/components/navbar/navbar.css" />
+  <link rel="stylesheet" href="assets/styles/components/tabs.css" />
+  <link rel="stylesheet" href="assets/styles/components/breadcrumb.css" />
+  <link rel="stylesheet" href="assets/styles/person.css" />
+</head>
+<body>
+
+  <!-- Navbar principal -->
+  <div class="component-navbar"
+    data-links="GitHub"
+    data-hrefs="https://github.com/jenilsonlucas/makeCompent"
+    data-links-contents="GitHub"
+    data-links-classes="link">
+    <h3 class="logo">makeComponent</h3>
+  </div>
+
+  <!-- Navbar lateral -->
+  <aside>
+    <nav class="navbar-side">
+      <a href="./index.html">Introdução</a>
+      <a href="./geral.html">Visão Geral</a>
+      <div class="dropdown">
+        <div class="select">
+          <span class="selected">Components</span>
+          <div class="caret"></div>
+        </div>
+        <ul class="menu">
+          <li><a href="./cards.html">Cards</a></li>
+          <li><a href="./button.html">Botão</a></li>
+          <li><a href="./input.html">Inputs</a></li>
+          <li><a href="./carrossel.html">Carrossel</a></li>
+          <li><a href="./tabela.html">Tabela</a></li>
+          <li><a href="./breadcrumb.html">Breadcrumb</a></li>
+          <li><a href="./section.html">Section com card</a></li>
+          <li><a href="./navbar.html">Navegação</a></li>
+          <li><a href="./tabs.html">Tabs</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo principal -->
+  <div class="container-main">
+    <div class="content-main">
+      <h1 class="tab__container--title">BREADCRUMB</h1>
+
+      <p>
+        O componente <strong>breadcrumb</strong> é utilizado para indicar o caminho de navegação da página atual. 
+        Ele ajuda os usuários a entenderem em que parte do site estão e permite uma navegação rápida entre os níveis.
+      </p>
+
+      <p>Você define no HTML da seguinte forma:</p>
+
+      <pre><code>
+      <span class="tag">&lt;div</span> 
+       <span class="class">class=<span class="code-content">"component-breadcrumb"</span></span>
+       <span class="attr">data-contents=<span class="code-content">"Início,Produtos,Detalhes"</span></span>
+      <span class="tag">&gt;&lt;/div&gt;</span>
+      </code></pre>
+    
+
+      <h3 class="tab__container--subtitle">2. Resultado</h3>
+
+      
+        <div class="component-breadcrumb"
+          data-links="www.github.com, www.google.com, www.youtube.com, www.instagram.com"
+          data-contents="Início,Serviços,Design,modelos">
+        </div>
+
+        
+      <h3 class="tab__container--subtitle">3. Atributos disponíveis</h3>
+      <ul>
+        <li><code>data-contents</code>: Define os nomes de cada etapa no breadcrumb (separados por vírgula).</li>
+        <li><code>data-links</code>: (opcional) Define os links correspondentes para cada etapa, também separados por vírgula.</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./assets/js/scripts.js"></script>
+  <script>initialize();</script>
+  <script src="./assets/js/events.js"></script>
+</body>
+</html>
